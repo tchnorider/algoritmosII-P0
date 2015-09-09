@@ -4,54 +4,38 @@ import ejercicios.Funcionario;
 
 public class laboratorio1 {
 
+	static Integer[] vector = { 35, 7, 67, 52, 31, 28 };
+
 	public static void main(String[] args) {
 
 		System.out.println(" >> Practico 0 <<");
 
-		// Ej 1
-		System.out.println(" ");
-		System.out.println(" Ejercicio 1");
-		imprimirImparesEntre1y50();
-
-		// Ej 2
-		System.out.println(" ");
-		System.out.println(" Ejercicio 2");
-		int nro = 8989;
-		imprimirNrosConEspacioEntreSi(nro);
-
-		// Ej 3
-		System.out.println(" ");
-		System.out.println(" Ejercicio 3");
-		int n = 6;
-		listarDel1AlN(n);
-		// ?:
-		// Recursivo:
-		// listarHastaNRecur(n);
-
-		System.out.println(" ");
-		System.out.println(" Ejercicio 3 - Reverso");
-		// Iterativo:
-		listarDel1AlNReverso(n);
-		// Recursivo:
-		listarHastaNReverRecur(n);
-
-		// Ej 4
-		int nf = 3;
-		System.out.println(" ");
-		System.out.println(" Ejercicio 4 - Factorial de " + nf);
-		System.out.println(" " + factorial(nf));
-
-		// Ej 5
-		System.out.println(" ");
-		System.out.println(" Ejercicio 5 ");
-
-		int[] arreglo = { 2, 4, 6, 8, 9 };
-		// a
-		retoranarMinimoElemento(arreglo);
-		// b
-		retornarPosicionMaxElemento(arreglo);
-		// c
-		ordenaRecursivo(arreglo, 6);
+		/*
+		 * // Ej 1 System.out.println(" "); System.out.println(" Ejercicio 1");
+		 * imprimirImparesEntre1y50();
+		 * 
+		 * // Ej 2 System.out.println(" "); System.out.println(" Ejercicio 2");
+		 * int nro = 8989; imprimirNrosConEspacioEntreSi(nro);
+		 * 
+		 * // Ej 3 System.out.println(" "); System.out.println(" Ejercicio 3");
+		 * int n = 6; listarDel1AlN(n); // ?: // Recursivo: //
+		 * listarHastaNRecur(n);
+		 * 
+		 * System.out.println(" ");
+		 * System.out.println(" Ejercicio 3 - Reverso"); // Iterativo:
+		 * listarDel1AlNReverso(n); // Recursivo: listarHastaNReverRecur(n);
+		 * 
+		 * // Ej 4 int nf = 3; System.out.println(" ");
+		 * System.out.println(" Ejercicio 4 - Factorial de " + nf);
+		 * System.out.println(" " + factorial(nf));
+		 * 
+		 * // Ej 5 System.out.println(" "); System.out.println(" Ejercicio 5 ");
+		 * 
+		 * int[] arreglo = { 2, 4, 6, 8, 9 }; // a
+		 * retoranarMinimoElemento(arreglo); // b
+		 * retornarPosicionMaxElemento(arreglo); // c ordenaRecursivo(arreglo,
+		 * 6);
+		 */
 
 		// Ej 6
 		System.out.println(" ");
@@ -109,14 +93,34 @@ public class laboratorio1 {
 	}
 
 	private static void bubbleOrdena() {
-		Integer[] vector = { 35, 7, 67, 52, 31, 28 };
 		bubbleSort(vector);
-		
+		while (notSorted(vector)) {
+			bubbleSort(vector);
+		}
+	}
+
+	private static boolean notSorted(Integer[] vector) {
+		Integer tam = vector.length;
+		for (int i = 0; i < tam; i++) {
+			if (vector[i] > vector[i + 1]) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	private static void bubbleSort(Integer[] vector) {
-		// TODO Auto-generated method stub
-		
+		Integer tam = vector.length;
+		StringBuilder strOut = new StringBuilder();
+		for (Integer i = 0; i < tam - 1; i++) {
+			strOut.append(String.valueOf(vector[i]));
+			if (vector[i] > vector[i + 1]) {
+				Integer aux = vector[i];
+				vector[i] = vector[i + 1];
+				vector[i + 1] = aux;
+			}
+		}
+		System.out.println(strOut);
 	}
 
 	private static void quienGanaMasEntreDosFuncs() {
