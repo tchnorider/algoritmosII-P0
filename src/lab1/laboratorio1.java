@@ -54,6 +54,9 @@ public class laboratorio1 {
 		// b
 		bubbleOrdena();
 
+		// c
+		mergeOrdena();
+
 		// Ej 8
 		System.out.println(" ");
 		System.out.println(" Ejercicio 8");
@@ -90,6 +93,10 @@ public class laboratorio1 {
 		 * left and the right of the pivot, usually the first element is the one
 		 * used as the pivot)
 		 */
+	}
+
+	private static void mergeOrdena() {
+		System.out.println(" Aplicar MergeSort al vector anterior.");
 	}
 
 	private static void bubbleOrdena() {
