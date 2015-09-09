@@ -1,3 +1,6 @@
+package lab1;
+
+import ejercicios.Funcionario;
 
 public class laboratorio1 {
 
@@ -20,22 +23,25 @@ public class laboratorio1 {
 		System.out.println(" ");
 		System.out.println(" Ejercicio 3");
 		int n = 6;
-		// Iterativo:
 		listarDel1AlN(n);
+		// ?:
 		// Recursivo:
 		// listarHastaNRecur(n);
 
 		System.out.println(" ");
 		System.out.println(" Ejercicio 3 - Reverso");
-		// Iterativo: listarDel1AlNReverso(n);
+		// Iterativo:
+		listarDel1AlNReverso(n);
 		// Recursivo:
 		listarHastaNReverRecur(n);
 
+		// Ej 4
 		int nf = 3;
 		System.out.println(" ");
 		System.out.println(" Ejercicio 4 - Factorial de " + nf);
 		System.out.println(" " + factorial(nf));
 
+		// Ej 5
 		System.out.println(" ");
 		System.out.println(" Ejercicio 5 ");
 
@@ -47,24 +53,90 @@ public class laboratorio1 {
 		// c
 		ordenaRecursivo(arreglo, 6);
 
-		// Ejercicio 8
+		// Ej 6
+		System.out.println(" ");
+		System.out.println(" Ejercicio 6");
+		// a
+		crearFuncionario();
+		// b
+		quienGanaMasEntreDosFuncs();
+
+		// Ej 7
+		System.out.println(" ");
+		System.out.println(" Ejercicio 7");
+		// a
+		System.out
+				.println(" El algoritmo se esta ordenando con el algoritmo 'Bubble Sort'");
+		// b
+		bubbleOrdena();
+
+		// Ej 8
+		System.out.println(" ");
+		System.out.println(" Ejercicio 8");
 		// b)
 		Nodo nodo = new Nodo(3);
 		Lista lista = new Lista();
 		int a = 7;
 		int b = 3;
 		lista.agregarRaro(nodo, a, b);
+
+		// 5 ways to sort a vector:
+
 		/*
-		 * 5 ways to sort a vector > SELECTION Sort (get the minimum(or maximum)
-		 * and switch) INSERTION Sort (have a ordered vector, and go inserting
-		 * the next item from the unordered vector) BUBBLE Sort (gathers a
-		 * couple of two and switches them if they're not in order) MERGE Sort
-		 * (divide vectors of vector in two and then merge the ordered vectors)
+		 * SELECTION Sort (get the minimum(or maximum) and switch)
+		 */
+
+		/*
+		 * INSERTION Sort (have a ordered vector, and go inserting the next item
+		 * from the unordered vector)
+		 */
+
+		/*
+		 * BUBBLE Sort (gathers a couple of two and switches them if they're not
+		 * in order)
+		 */
+
+		/*
+		 * MERGE Sort (divide vectors of vector in two and then merge the
+		 * ordered vectors)
+		 */
+
+		/*
 		 * QUICK Sort (grab a random pivot element and compare the items on the
 		 * left and the right of the pivot, usually the first element is the one
 		 * used as the pivot)
 		 */
+	}
 
+	private static void bubbleOrdena() {
+		Integer[] vector = { 35, 7, 67, 52, 31, 28 };
+		bubbleSort(vector);
+		
+	}
+
+	private static void bubbleSort(Integer[] vector) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void quienGanaMasEntreDosFuncs() {
+		Funcionario func1 = new Funcionario("Func 1", 6000);
+		Funcionario func2 = new Funcionario("Func 2", 5000);
+
+		if (func1.getSueldo() > func2.getSueldo()) {
+			System.out.println(" El funcionario 1 gana mas.");
+		} else {
+			System.out.println(" El funcionario 2 gana mas.");
+		}
+
+	}
+
+	private static void crearFuncionario() {
+		String nom = "JP";
+		Integer mon = 6000;
+		Funcionario func = new Funcionario(nom, mon);
+		System.out.println(" Funcionario: " + func.getNom() + ", gana "
+				+ func.getSueldo());
 	}
 
 	private static void ordenaRecursivo(int[] arreglo, int max) {

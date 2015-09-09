@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>algoritmosII-P0</name>
-	<comment></comment>
-	<projects>
+	
+
+<name>algoritmosII-P0</name>
+	
+
+<comment>      </comment>
+	
+
+<projects>
 	</projects>
+	
+
 	<buildSpec>
 	</buildSpec>
-	<natures>
-	</natures>
+
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>	
+
+<natures>
+	
+<nature>org.eclipse.jdt.core.javanature</nature>
+</natures>>
+
+
+
+
 </projectDescription>
