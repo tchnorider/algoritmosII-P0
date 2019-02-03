@@ -100,7 +100,6 @@ public class laboratorio1 {
 	}
 
 	private static void bubbleSort(Integer[] vector) {
-
 		boolean done = false;
 		while (!done) {
 			done = true;
