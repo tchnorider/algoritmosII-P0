@@ -99,35 +99,23 @@ public class laboratorio1 {
 		System.out.println(" Aplicar MergeSort al vector anterior.");
 	}
 
-	private static void bubbleOrdena() {
-		bubbleSort(vector);
-		while (notSorted(vector)) {
-			bubbleSort(vector);
-		}
-	}
-
-	private static boolean notSorted(Integer[] vector) {
-		Integer tam = vector.length;
-		for (int i = 0; i < tam; i++) {
-			if (vector[i] > vector[i + 1]) {
-				return false;
-			}
-		}
-		return true;
-	}
-
 	private static void bubbleSort(Integer[] vector) {
-		Integer tam = vector.length;
-		StringBuilder strOut = new StringBuilder();
-		for (Integer i = 0; i < tam - 1; i++) {
-			strOut.append(String.valueOf(vector[i]));
-			if (vector[i] > vector[i + 1]) {
-				Integer aux = vector[i];
-				vector[i] = vector[i + 1];
-				vector[i + 1] = aux;
+
+		boolean done = false;
+		while (!done) {
+			done = true;
+			int itemsToBeSorted = numberArray.length - 1;
+
+			for (int i = 0; i < itemsToBeSorted; i++) {
+				if (numberArray[i] > numberArray[i + 1]) {
+					int smaller = numberArray[i + 1];
+					numberArray[i + 1] = numberArray[i];
+					numberArray[i] = smaller;
+					done = false;
+				}
 			}
+			itemsToBeSorted--;
 		}
-		System.out.println(strOut);
 	}
 
 	private static void quienGanaMasEntreDosFuncs() {
